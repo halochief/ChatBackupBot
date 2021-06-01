@@ -51,7 +51,7 @@ async def msg_text(client: Client, message: Message):
 		tes ="@"+ str(message.from_user.username)+" "+str(message.chat.first_name) +"\n"+str(message.text)+"\n"+str(utc_to_time(message.date))
 	g=requests.post(BOT_url+'/sendmessage' , json={"chat_id":log_channel,"text":tes})
 	print(tes)
-	print(g)
+	print(g.text)
 
 @app.on_message(filters.photo & filters.private & ~filters.bot)
 async def msg_photo(client: Client, message: Message):
